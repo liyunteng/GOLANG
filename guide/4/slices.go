@@ -39,6 +39,8 @@ func main() {
 	z = append(z, 2, 3, 4)
 	printSlice("z", z)
 
+	z = append(z[:1], z[1:]...)
+	printSlice("z", z)
 }
 
 func printSlice(s string, x []int) {
